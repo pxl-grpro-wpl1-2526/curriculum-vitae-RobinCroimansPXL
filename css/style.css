@@ -16,3 +16,21 @@ footer {
     display: flex;
     justify-content: space-between;
 }
+.mobiel {
+    display: none;
+}
+
+@media (max-width: 575px) {
+    .talen {
+        display: none;
+    }
+    .mobiel {
+        display: block;
+    }
+}
+
+@media (min-width: 992px) {
+    .talen {
+        display: table;
+    }
+}
