@@ -34,3 +34,26 @@ footer {
         display: table;
     }
 }
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #222;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin-bottom: 0.5rem;
+}
+
+header {
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: #ffffff;
+}
+
