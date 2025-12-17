@@ -56,4 +56,22 @@ header {
     text-align: center;
     background-color: #ffffff;
 }
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 1rem;
+}
 
+section {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+}
+
+.foto {
+    display: block;
+    width: 200px;
+    height: auto;
+    margin-top: 1rem;
+}
