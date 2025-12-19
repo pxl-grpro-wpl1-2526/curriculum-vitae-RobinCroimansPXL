@@ -1,77 +1,156 @@
+body {
+    background-color: #F5F1E8;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 2rem;
+}
+
+section {
+    background-color: #468F92;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .foto {
+    width: 140px;
+    border-radius: 50%;
     transition: box-shadow 0.3s;
 }
 
 .foto:hover {
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
 }
-.talen tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
 }
+
+main section {
+    grid-column: span 2;
+}
+
+.opleiding,
+.vaardigheden,
+.talen,
 .werkervaring {
-    list-style: none;
-    padding: 0;
+    grid-column: span 1;
 }
+
+.talen table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.talen tr:nth-child(even) {
+    background-color: rgba(255,255,255,0.2);
+}
+.talen th,
+.talen td {
+    text-align: left;
+    padding: 0.5rem;
+}
+
+.talen th {
+    font-weight: bold;
+}
+
 footer {
     display: flex;
     justify-content: space-between;
+    margin-top: 2rem;
 }
+
 .mobiel {
     display: none;
 }
 
 @media (max-width: 575px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
     .talen {
         display: none;
     }
+
     .mobiel {
         display: block;
     }
 }
+section {
+    background-color: transparent;
+}
 
-@media (min-width: 992px) {
-    .talen {
-        display: table;
+h2 {
+    color: #468F92;
+}
+.vaardigheden {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.skill {
+    text-align: center;
+}
+
+.circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: conic-gradient(
+            #468F92 calc(var(--percent) * 1%),
+            #e0e0e0 0
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fill 1.5s ease-out forwards;
+}
+
+.circle span {
+    background-color: #fff;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* MOBIEL: cirkel weg, percentage blijft */
+@media (max-width: 575px) {
+    .circle {
+        background: none;
+        width: auto;
+        height: auto;
+        animation: none;
+    }
+
+    .circle span {
+        background: none;
+        width: auto;
+        height: auto;
+        padding: 0;
+        font-size: 1rem;
     }
 }
 
-
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-    color: #222;
-    line-height: 1.6;
-}
-
-h1, h2, h3 {
-    font-family: "Segoe UI", Arial, sans-serif;
-    margin-bottom: 0.5rem;
-}
-
-header {
-    padding: 2rem 1rem;
-    text-align: center;
-    background-color: #ffffff;
-}
-main {
-    max-width: 900px;
-    margin: auto;
-    padding: 1rem;
-}
-
-section {
-    background-color: #ffffff;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-radius: 4px;
-}
-
-.foto {
-    display: block;
-    width: 200px;
-    height: auto;
-    margin-top: 1rem;
+@keyframes fill {
+    from {
+        background: conic-gradient(#468F92 0%, #e0e0e0 0);
+    }
 }
